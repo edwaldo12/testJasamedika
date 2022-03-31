@@ -19,12 +19,12 @@ use Illuminate\Support\Facades\Route;
 
 
 
-//ROUTE GENERAL
-Route::get('login', [LoginController::class, "index"])->name('login');
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('register', [LoginController::class, "register"]);
-Route::post('signUp', [LoginController::class, "signUp"])->name('signUp');
-Route::post('signIn', [LoginController::class, "signIn"])->name('signIn');
+    //ROUTE GENERAL
+    Route::get('login', [LoginController::class, "index"])->name('login');
+    Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+    Route::get('register', [LoginController::class, "register"]);
+    Route::post('signUp', [LoginController::class, "signUp"])->name('signUp');
+    Route::post('signIn', [LoginController::class, "signIn"])->name('signIn');
 
 Route::middleware(['checkAuth','Revalidate'])->group(function () {
     Route::get('/', function () {
