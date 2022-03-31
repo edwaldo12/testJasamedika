@@ -17,22 +17,14 @@ class UserFactory extends Factory
      */
     public function definition()
     {
-        return [
+        return 
             [
                 'username' => 'Admin',
                 'email' => 'Admin@gmail.com',
                 'phone' => '0855667712', // password
                 'password' => bcrypt('admin'),
                 'role' => 'admin',
-            ],
-            [
-                'username' => 'Operator',
-                'email' => 'Operator@gmail.com',
-                'phone' => '0855667712', // password
-                'password' => bcrypt('operator'),
-                'role' => 'operator',
-            ],
-        ];
+            ];
     }
 
     /**
